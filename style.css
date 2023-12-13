@@ -204,7 +204,15 @@ nav ul li a:hover {
   }
   
   .card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     padding: 20px;
+  }
+
+  .card-body a {
+    margin: 0 2rem;
+    margin-bottom: 1.1rem;
   }
   
   .card-title {
