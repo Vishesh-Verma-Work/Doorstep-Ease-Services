@@ -1,0 +1,139 @@
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+}
+
+
+.header {
+    padding: 1rem 0 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #333; */
+}
+
+.header a {
+    color: black;
+}
+
+
+.right-header {
+    margin-right: 2rem;
+    float: right;
+    margin-right: 1rem;
+}
+
+.right-header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-header a {
+    font-weight: 700;
+    font-size: 1.17rem;
+    padding-right: 1rem;
+    margin-right: 2rem;
+}
+
+.right-header i {
+    display: none;
+}
+
+nav ul li a:hover {
+    color: rgb(86, 18, 212);
+}
+
+.left-header {
+    color: black;
+    font-size: 2rem;
+    margin-left: 0.8rem;
+}
+
+
+.right-header button {
+    font-size: 1.17rem;;
+    background-color: yellow;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    margin-right: 2rem;
+    border-radius: 1rem;
+    padding: .5rem 1.5rem;
+}
+
+
+.header-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 9rem;
+    background-color:  black;
+}
+
+.header-list {
+    transition: 0ms;
+    margin: .2rem 0;
+    padding: .2rem 0;
+    text-align: center;
+    width: 90%;
+    border-radius: .2rem;
+    border: 1px solid rgba(199, 30, 30, 0.404);
+}
+
+.header-list:hover {
+    border: 1px solid rgba(220, 184, 184, 0.404);
+}
+
+.header-list a {
+    color: white;
+}
+
+.header-down {
+    display: none;
+}
+
+#cross {
+    font-size: 1.4rem;
+    display: none;
+}
+
+
+    /* Responsive of header */
+
+@media (max-width: 828px) {
+    .left-header {
+        margin-left: .3rem;
+    }
+}
+
+@media (max-width: 673px) {
+    .left-header {
+        margin-left: .5rem;
+    }
+
+    .left-header li {
+        font-size: 1.3rem;
+    }
+    .header {
+        padding: .7rem 0 .7rem .4rem;
+    }
+}
+
+@media (max-width: 527px) {
+    
+.right-header a {
+    display: none;
+}
+
+.right-header i {
+    color: white;
+   display:block;
+}
+}
