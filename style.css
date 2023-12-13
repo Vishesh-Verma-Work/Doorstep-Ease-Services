@@ -8,6 +8,7 @@
 }
 
 
+
 .header {
     padding: 1rem 0 1rem 1rem;
     display: flex;
@@ -34,6 +35,7 @@
 }
 
 .right-header a {
+    text-decoration: none;
     font-weight: 700;
     font-size: 1.17rem;
     padding-right: 1rem;
@@ -137,3 +139,96 @@ nav ul li a:hover {
    display:block;
 }
 }
+
+
+
+   /* landing page css */
+
+.landing {
+    margin-top: 4rem;
+    /* border: 2px solid black; */
+    padding: 0 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ladingLeft {
+    width: 40%;
+}
+
+.ladingLeft p {
+    margin-top: 2rem;
+}
+
+
+
+.landingRight {
+    width: 44rem ;
+}
+
+
+
+
+   /* cards section  */
+
+
+   .card-container {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .card {
+    width: 22rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin: 2rem;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 3rem rgba(0, 0, 0, 0.188);
+  }
+  
+  .card img {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .btn-secondary {
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #333;
+  }
+  
