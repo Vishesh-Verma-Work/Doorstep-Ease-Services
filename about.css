@@ -48,6 +48,7 @@ body {
 }
 
 .aboutDesc p {
+    text-align: justify;
     color:  rgb(49, 48, 48);
     margin: 2rem 1.5rem;
     font-family: "Gilroy";
