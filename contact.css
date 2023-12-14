@@ -7,26 +7,34 @@
     border: 0;
 }
 
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #fff;
   }
   
   .container {
-    width: 60%;
-    margin: 6rem auto;
+    width: 50%;
     background-color: #fff;
     padding: 20px;
     padding-bottom: 40px;
     padding-right:40px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
   }
   
   h2 {
-    text-align: center;
+    text-align: start;
+    font-size: 3.4rem;
+    color: #333;
     margin-bottom: 20px;
   }
   
@@ -63,3 +71,7 @@ body {
     background-color: #555;
   }
   
+
+  .illust img {
+    height: 35rem;
+  }
