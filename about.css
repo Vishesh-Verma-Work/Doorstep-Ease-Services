@@ -33,10 +33,9 @@ body {
 
 .aboutDesc {
     box-shadow:  0 0 2rem rgba(135, 129, 129, 0.4);
-    border-radius: .5rem;
     margin-top: 4rem;
     background-color: white;
-    width: 70%;
+    width: 92%;
     padding-bottom: 2rem;
 }
 
@@ -56,5 +55,24 @@ body {
 }
 
 #aboutDesGap {
-    margin-top: 7rem;
+    margin-top: 4rem;
+}
+
+.right img {
+    height: 28rem;
+    width: auto;
+}
+
+.main {
+    display: flex;
+}
+
+.left img {
+    height: 22rem;
+    width: auto;
+}
+
+
+.space {
+    margin-bottom: 20rem;
 }
