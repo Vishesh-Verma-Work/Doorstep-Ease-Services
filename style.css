@@ -47,7 +47,7 @@
 }
 
 nav ul li a:hover {
-    color: rgb(86, 18, 212);
+    color: rgba(0, 0, 0, 0.63);
 }
 
 .left-header {
@@ -56,16 +56,20 @@ nav ul li a:hover {
     margin-left: 0.8rem;
 }
 
+.left-header img {
+    height: 3.2rem;
+    width: 21rem;
+}
 
 .right-header button {
     font-size: 1.17rem;;
-    background-color: yellow;
-    color: black;
+    background-color: #484848;
+    color: white;
     font-weight: 700;
     cursor: pointer;
     margin-right: 2rem;
     border-radius: 1rem;
-    padding: .5rem 1.5rem;
+    padding: .4rem 1.4rem;
 }
 
 
@@ -239,4 +243,8 @@ nav ul li a:hover {
   .btn-secondary:hover {
     background-color: #333;
   }
+  
+
+
+
   
