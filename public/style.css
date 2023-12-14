@@ -13,6 +13,10 @@ body {
 
 }
 
+a {
+    cursor: pointer;
+}
+
 .header {
     padding: 1rem 0 1rem 1rem;
     display: flex;
