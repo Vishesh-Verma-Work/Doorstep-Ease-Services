@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doorstep-Ease-Services</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav>
+    <div class="header">
+      <div class="left-header">
+        <ul>
+          <li><img src="assest/logo.png" alt="Logo"></li>
+        </ul>
+      </div>
+      <div class="right-header">
+        <ul>
+          <li><a href="#" onclick="scrollToServices()"  class="right-header-und">Home</a></li>
+          <li><a href="about">About</a></li>
+          <li><a href="contact">Contact</a></li>
+          <li><a href="services">Add Services</a></li>
+          <li><button>Login</button></li>
+          <li><button>Signup</button></li>
+          <i class="fa-solid fa-bars" id="hamburger"></i>
+          <i class="fa-solid fa-xmark" id="cross"></i>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="header-down">
+    <div class="header-list">
+      <a href="#">Login</a>
+    </div>
+    <div class="header-list">
+      <a href="#">Help</a>
+    </div>
+    <div class="header-list">
+      <a href="#">Contact</a>
+    </div>
+    <div class="header-list">
+      <a href="#">Add Hospital</a>
+    </div>
+  </div>
+
+
+  <div class="landing">
+    <div class="ladingLeft">
+      <h3>Welcome to DoorstepEase Services: Your Hassle-Free Solution Hub</h3>
+      <p>Discover convenience and reliability at DoorstepEase. Connect with verified professionals for a wide array of
+        essential home services. With a user-friendly interface, swift response times, and a focus on reliability, we
+        bring ease and peace of mind right to your doorstep.</p>
+    </div>
+    <div class="landingRight">
+      <div id="carouselExample" class="carousel slide landingSlider">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assest/brave_2B1E69Y78o.png" class="d-block w-100" alt="img">
+          </div>
+          <div class="carousel-item">
+            <img src="assest/brave_8oqaLG7onR.png" class="d-block w-100" alt="img">
+          </div>
+          <div class="carousel-item">
+            <img src="assest/brave_gNr0h3QV1d.png" class="d-block w-100" alt="img">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="card-container" id="servicesSection">
+
+
+    <div class="card">
+      <img src="assest/carpenter.png" class="card-img-top" alt="Carpenter">
+      <div class="card-body">
+        <h5 class="card-title">Carpentry Services</h5>
+        <p class="card-text">Skilled carpenters adept at crafting, repairing, or enhancing various wooden structures
+          within your home, ensuring precision and durability in every project.</p>
+          <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/home.png" class="card-img-top" alt="Plumber">
+      <div class="card-body">
+        <h5 class="card-title">Home Cleaning</h5>
+        <p class="card-text">Our professional cleaning service meticulously tends to every nook and corner, delivering a
+          pristine home environment with thorough, top-tier cleaning techniques.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/electrical.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Electrical Services</h5>
+        <p class="card-text">Certified electricians proficient in handling a spectrum of electrical needs, offering safe
+          and efficient solutions for installations, repairs, and maintenance.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="card">
+      <img src="assest/plumber.png" class="card-img-top" alt="Carpenter">
+      <div class="card-body">
+        <h5 class="card-title">Plumbing Services</h5>
+        <p class="card-text">Expert plumbers adept at resolving plumbing concerns promptly, employing their know-how to
+          fix leaks, install fixtures, and ensure optimal functionality.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/water-puri.png" class="card-img-top" alt="Plumber">
+      <div class="card-body">
+        <h5 class="card-title">Water Purification</h5>
+        <p class="card-text">Providing advanced purification solutions, guaranteeing clean and safe drinking water for
+          your household, prioritizing your health and well-being.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/pest.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Pest Control Services</h5>
+        <p class="card-text">Efficient pest eradication and prevention services ensuring a pest-free home environment,
+          safeguarding your property from infestations.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="assest/interrior.png" class="card-img-top" alt="Plumber">
+      <div class="card-body">
+        <h5 class="card-title">Interior Design</h5>
+        <p class="card-text">Creatively transforming spaces, our interior designers curate functional, aesthetically
+          pleasing interiors tailored to your preferences and lifestyle.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/air.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Heating, Air Conditioning</h5>
+        <p class="card-text">Offering proficient services to maintain and optimize your home's heating and cooling
+          systems, ensuring year-round comfort.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/civil.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Civil Work</h5>
+        <p class="card-text">Comprehensive solutions for civil maintenance, addressing structural concerns and upkeep
+          for a safe and well-maintained living space.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="card">
+      <img src="assest/paint.png" class="card-img-top" alt="Plumber">
+      <div class="card-body">
+        <h5 class="card-title">Paint Services</h5>
+        <p class="card-text">Skilled painters delivering high-quality finishes, rejuvenating interiors or exteriors with
+          precision and attention to detail.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="assest/roof.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Roofing Repairs</h5>
+        <p class="card-text">Trustworthy repairs ensuring a secure, weather-resistant roof, safeguarding your home from
+          external elements and enhancing longevity.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <img src="assest/kitch.png" class="card-img-top" alt="Electrician">
+      <div class="card-body">
+        <h5 class="card-title">Kitchen Clearning</h5>
+        <p class="card-text">Professional cleaning services focused on ensuring a hygienic and organized kitchen space,
+          maintaining cleanliness and sanitation standards.</p>
+        <a href="#" class="btn btn-secondary">Explore</a>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+  </div>
+
+  
+  <div class="serviceInfo">
+
+  </div>
+
+
+
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
