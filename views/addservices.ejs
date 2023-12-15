@@ -39,19 +39,28 @@
         <label for="description">Description:</label>
         <textarea id="description" name="description" rows="4" required ="true" placeholder="Description"></textarea>
 
-        <label for="category">Category:</label>
-        <select id="category" name="category" required>
-            <option value="plumbing">Plumbing</option>
-            <option value="carpentry">Carpentry</option>
-            <option value="painting">Home Cleaning</option>
-            <option value="painting">Painting</option>
-            <option value="painting">Electrical Services</option>
-            <option value="painting">Plumbing Services</option>
-            <option value="painting">Interior Designn</option>
-            <option value="painting">Kitchen Cleaning</option>
-            <option value="painting">Pest Control</option>
-            <option value="painting">Roofing Repairs</option>
+ 
+        <select id="upperDropdown" name="upperDropdown" required>
+                <option value="plumbing">Plumbing</option>
+                <option value="carpentry">Carpentry</option>
+                <option value="HomeCleaning">Home Cleaning</option>
+                <option value="PaintServices">Paint Services</option>
+                <option value="Electrician">Electrical Services</option>
+                <option value="WaterPurification">Water Purification Services</option> //will see it later on
+                <option value="InteriorDesign">Interior Designn</option>
+                <option value="KitchenCleaning">Kitchen Cleaning</option>
+                <option value="PestControlServices">Pest Control</option>
+                <option value="RoofingRepairs">Roofing Repairs</option>
+                <option value="CivilWork">Civil Work</option>
+                <option value="HVACServices">HVAC Services</option>
+      
         </select>
+
+
+        <select id="lowerDropdown">
+    
+        </select>
+
 
         <label for="primaryPhoneNumber">Primary Phone Number:</label>
         <div style="display: flex;">
@@ -114,5 +123,6 @@
 
     
 
+    <script src="addservices.js"></script>
 </body>
 </html>
