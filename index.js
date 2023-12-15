@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-// const methodOverride = require('method-override')
+// const methodOverride = require('method-override')    
 
 // const { v4: uuidv4 } = require('uuid');
 
@@ -44,6 +44,7 @@ app.get("/service/Carpentry", (req,res)=>{
 app.get("/service/Plumber", (req,res)=>{
     res.render("service.ejs", { mainData : Plumber , serviceName : "Plumber Services"});
 });
+
 
 app.get("/service/Electrician", (req,res)=>{
     res.render("service.ejs", { mainData : Electrician , serviceName : "Electrical Services"});
