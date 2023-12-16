@@ -11,10 +11,15 @@
 <body>
 
     <h2><%= serviceName %></h2>
+
+
+
     <% for(data of mainData) { %>
         <div class="sec">
-            <div class="name"><%= data.name %></div>
-            <%= data.des %>
+            <div class="name"><%= data.serviceName %></div>
+            <%= data.desc %> <br>
+            <%= data.type %> <br>
+            <%= data.cost %> <br>
         </div>
     <% } %>
 

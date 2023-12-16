@@ -86,59 +86,67 @@ app.post("/IDdetail", (req,res)=>{
 
 
 
-app.get("/service/Carpentry", (req,res)=>{
-    res.render("service.ejs", { mainData : Carpentry , serviceName : "Carpentry Services"});
+app.get("/service/Carpentry", async (req,res)=>{
+    // let data = await catgs.find();
+    const data = await catgs.find({ type: 'carpentry' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Carpentry Services"});
 });
 
-app.get("/service/Plumber", (req,res)=>{
-    res.render("service.ejs", { mainData : Plumber , serviceName : "Plumber Services"});
-});
-
-
-app.get("/service/Electrician", (req,res)=>{
-    res.render("service.ejs", { mainData : Electrician , serviceName : "Electrical Services"});
-});
-
-app.get("/service/PestControlServices", (req,res)=>{
-    res.render("service.ejs", { mainData : PestControlServices , serviceName : "Pest Control Services"});
-});
-
-app.get("/service/InteriorDesign", (req,res)=>{
-    res.render("service.ejs", { mainData : InteriorDesign, serviceName : "Interior Desiging Services" });
-});
-
-app.get("/service/HVACServices", (req,res)=>{
-    res.render("service.ejs", { mainData : HVACServices , serviceName : "HVACServices"});
-});
-
-app.get("/service/CivilWork", (req,res)=>{
-    res.render("service.ejs", { mainData : CivilWork , serviceName : "Civil Work Services"});
-});
-
-app.get("/service/PaintServices", (req,res)=>{
-    res.render("service.ejs", { mainData : PaintServices , serviceName : "Paint Services"});
-});
-
-app.get("/service/RoofingRepairs", (req,res)=>{
-    res.render("service.ejs", { mainData : RoofingRepairs , serviceName : "Roofing Repairs Services"});
-});
-
-app.get("/service/KitchenCleaning", (req,res)=>{
-    res.render("service.ejs", { mainData : KitchenCleaning , serviceName : "Kitchen Cleaning Services"});
-});
-
-app.get("/service/HomeCleaning", (req,res)=>{
-    res.render("service.ejs", { mainData : HomeCleaning , serviceName : "Home Cleaning Services"});
-});
-
-app.get("/service/WaterPurification", (req,res)=>{
-    res.render("service.ejs", { mainData : WaterPurification , serviceName : "Water Purification Services"});
+app.get("/service/Plumber", async (req,res)=>{
+    const data = await catgs.find({ type: 'plumbing' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Plumber Services"});
 });
 
 
+app.get("/service/Electrician", async (req,res)=>{
+    const data = await catgs.find({ type: 'Electrician' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Electrical Services"});
+});
 
+app.get("/service/PestControlServices",async  (req,res)=>{
+    const data = await catgs.find({ type: 'PestControlServices' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Pest Control Services"});
+});
 
+app.get("/service/HomeCleaning", async (req,res)=>{
+    const data = await catgs.find({ type: 'HomeCleaning' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Home Cleaning Services"});  
+});
 
+app.get("/service/PaintServices", async (req,res)=>{
+    const data = await catgs.find({ type: 'PaintServices' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Paint Services"});
+});
+
+app.get("/service/WaterPurification",async  (req,res)=>{
+    const data = await catgs.find({ type: 'WaterPurification' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Water Purification Services"});
+});
+
+app.get("/service/InteriorDesign", async (req,res)=>{
+    const data = await catgs.find({ type: 'InteriorDesign' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Interior Design Services"});
+});
+
+app.get("/service/KitchenCleaning",async  (req,res)=>{
+    const data = await catgs.find({ type: 'KitchenCleaning' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Kitchen Cleaning Services"});
+});
+
+app.get("/service/RoofingRepairs",async  (req,res)=>{
+    const data = await catgs.find({ type: 'RoofingRepairs' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Roofing Repairs Services"});
+});
+
+app.get("/service/CivilWork", async (req,res)=>{
+    const data = await catgs.find({ type: 'CivilWork' });
+    res.render("service.ejs", { mainData : data  , serviceName : "Civil Work Services"});
+});
+
+app.get("/service/HVACServices", async (req,res)=>{
+    const data = await catgs.find({ type: 'HVAC Services' });
+    res.render("service.ejs", { mainData : data  , serviceName : "HVAC Services Services"});
+});
 
 
  
