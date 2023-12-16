@@ -1,6 +1,34 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const mongoose = require('mongoose');
+const bodyParser = require("body-parser");
+const catgs = require("./models/categ.js");
+
+
+main().then( ()=>{
+    console.log("Connected to the MongoDB database");
+}).catch(() => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/DoorStepEase');
+
+
+}
+
+
+// let test = new catgs({
+//     serviceName : "home making",
+//     desc : "kr lunga",
+//     type : "xyz",
+//     cost : 2234
+// });
+
+
+// test.save().then((res) => {
+//     console.log(res);
+// })
+
 // const methodOverride = require('method-override')    
 
 // const { v4: uuidv4 } = require('uuid');
@@ -33,6 +61,27 @@ app.get("/contact", (req,res)=>{
 
 app.get("/addservices", (req,res)=>{
     res.render("addservices.ejs");
+});
+
+app.post("/IDdetail", (req,res)=>{
+    let {title, description,upperDropdown, price} = req.body;
+    // console.log(title);
+    // console.log(description);
+    // console.log(upperDropdown);
+    // console.log(price);
+    // console.log(image);
+
+    let newCatg = new catgs({
+        serviceName : title,
+        desc : description,
+        type : upperDropdown,
+        cost : price,
+    });
+
+    console.log(newCatg);
+    newCatg.save();
+
+    res.render("IDdetail.ejs");
 });
 
 
