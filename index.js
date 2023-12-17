@@ -103,10 +103,6 @@ app.post("/IDdetail", (req,res)=>{
 
 
 
-
-
-
-
 app.get("/service/Carpentry", async (req,res)=>{
     // let data = await catgs.find();
     const data = await catgs.find({ type: 'carpentry' });
