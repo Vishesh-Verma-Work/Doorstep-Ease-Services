@@ -12,17 +12,81 @@
 
     <h2><%= serviceName %></h2>
 
+    <!-- serviceName : title,
+    desc : description,
+    type : upperDropdown,
+    cost : price, 
+    name : name,
+    exp : Experience,
+    add : address,
+    email : email,
+    code1 : primaryCountryCode,
+    num1 : primaryPhoneNumber,
+    code2 : alternateCountryCode,
+    num2 : alternatePhoneNumber, -->
 
-
+    <div class="data">
     <% for(data of mainData) { %>
         <div class="sec">
             <div class="name"><%= data.serviceName %></div>
-            <%= data.desc %> <br>
-            <%= data.type %> <br>
-            <%= data.cost %> <br>
-            <a href="/service/name"><button>Get Info</button></a>
+            <div class="des">
+                <h5>Description : </h5>
+                <%= data.desc %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Type : </h5>
+                <%= data.type %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Estimated Cost : </h5>
+                <%= data.cost %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Service Provider Name : </h5>
+                <%= data.name %> <br>
+            </div>
+
+
+            <div class="des">
+                <h5>Service Experience : </h5>
+                <%= data.exp %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Address : </h5>
+                <%= data.add %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Email : </h5>
+                <%= data.email %> <br>
+            </div>
+
+            <div class="des">
+                <h5>Primary Number : </h5>
+                <%= data.code1 %> &nbsp;&nbsp; <%= data.num1 %>
+            </div>
+
+            <div class="des">
+                <h5>Secondary Number : </h5>
+                <%= data.code2 %>  &nbsp;&nbsp; <%= data.num2 %>
+            </div>
+
+
+            
+         
+
+
+            
+            
+
+
         </div>
     <% } %>
+</div>
 
     <a href="/home"><button>Back</button></a>
 

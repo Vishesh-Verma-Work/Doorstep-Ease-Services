@@ -5,6 +5,8 @@ const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const catgs = require("./models/categ.js");
 const provs = require("./models/provider.js");
+
+
 const { getEnabledCategories } = require("trace_events");
 
 
@@ -53,6 +55,7 @@ app.get("/", (req,res)=>{
     res.render("index.ejs");
 });
 
+
 app.get("/home", (req,res)=>{
     res.render("index.ejs");
 });
@@ -70,39 +73,15 @@ app.get("/addservices", (req,res)=>{
 });
 
 app.post("/IDdetail", (req,res)=>{
-    let {title, description,upperDropdown, price, _id} = req.body;
-    let ID = _id;
-    console.log(ID);
+    let {title, description,upperDropdown, price, name, Experience,address,email,primaryCountryCode,primaryPhoneNumber,alternateCountryCode,alternatePhoneNumber} = req.body;
+ 
 
     let newCatg = new catgs({
         serviceName : title,
         desc : description,
         type : upperDropdown,
         cost : price,
-    });
 
-    console.log(newCatg);
-
-    newCatg.save();
-
-    res.render("IDdetail.ejs");
-});
-
-app.post("/IDdetail/save", (req,res)=>{
-
-   
-    let {name, Experience,address,email,primaryCountryCode,primaryPhoneNumber,alternateCountryCode,alternatePhoneNumber} = req.body;
-    // console.log(name);
-    // console.log(Experience);
-    // console.log(address);
-    // console.log(email);
-    // console.log(primaryCountryCode);
-    // console.log(primaryPhoneNumber);
-    // console.log(alternateCountryCode);
-    // console.log(alternatePhoneNumber);
-    // res.send("working !!");
-
-    let newProv = new provs({
         name : name,
         exp : Experience,
         add : address,
@@ -112,16 +91,13 @@ app.post("/IDdetail/save", (req,res)=>{
         code2 : alternateCountryCode,
         num2 : alternatePhoneNumber,
     });
-    // console.log(newProv);
-    newProv.save();
+
+    console.log(newCatg);
+
+    newCatg.save();
+
+    // res.render("index.ejs");
     res.redirect("http://localhost:8080/home?saved=true");
-});
-
-
-app.get("/service/name", async (req,res)=>{
-    // let data = await catgs.find();
-    const data = await provs.find();
-    res.render("temp.ejs", { mainData : data  , serviceName : "provider details"});
 });
 
 
