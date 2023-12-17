@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const catgs = require("./models/categ.js");
 const provs = require("./models/provider.js");
+const { getEnabledCategories } = require("trace_events");
 
 
 main().then( ()=>{
@@ -69,12 +70,9 @@ app.get("/addservices", (req,res)=>{
 });
 
 app.post("/IDdetail", (req,res)=>{
-    let {title, description,upperDropdown, price} = req.body;
-    // console.log(title);
-    // console.log(description);
-    // console.log(upperDropdown);
-    // console.log(price);
-    // console.log(image);
+    let {title, description,upperDropdown, price, _id} = req.body;
+    let ID = _id;
+    console.log(ID);
 
     let newCatg = new catgs({
         serviceName : title,
@@ -82,6 +80,8 @@ app.post("/IDdetail", (req,res)=>{
         type : upperDropdown,
         cost : price,
     });
+
+    console.log(newCatg);
 
     newCatg.save();
 
