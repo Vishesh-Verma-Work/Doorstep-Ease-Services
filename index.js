@@ -4,6 +4,7 @@ const path = require("path");
 const mongoose = require('mongoose');
 const bodyParser = require("body-parser");
 const catgs = require("./models/categ.js");
+const provs = require("./models/provider.js");
 
 
 main().then( ()=>{
@@ -47,6 +48,10 @@ app.listen(port, ()=> {
     console.log(`Server is listening on port : ${port}`);
 });
 
+app.get("/", (req,res)=>{
+    res.render("index.ejs");
+});
+
 app.get("/home", (req,res)=>{
     res.render("index.ejs");
 });
@@ -78,11 +83,51 @@ app.post("/IDdetail", (req,res)=>{
         cost : price,
     });
 
-    console.log(newCatg);
     newCatg.save();
 
     res.render("IDdetail.ejs");
 });
+
+app.post("/IDdetail/save", (req,res)=>{
+
+   
+    let {name, Experience,address,email,primaryCountryCode,primaryPhoneNumber,alternateCountryCode,alternatePhoneNumber} = req.body;
+    // console.log(name);
+    // console.log(Experience);
+    // console.log(address);
+    // console.log(email);
+    // console.log(primaryCountryCode);
+    // console.log(primaryPhoneNumber);
+    // console.log(alternateCountryCode);
+    // console.log(alternatePhoneNumber);
+    // res.send("working !!");
+
+    let newProv = new provs({
+        name : name,
+        exp : Experience,
+        add : address,
+        email : email,
+        code1 : primaryCountryCode,
+        num1 : primaryPhoneNumber,
+        code2 : alternateCountryCode,
+        num2 : alternatePhoneNumber,
+    });
+    // console.log(newProv);
+    newProv.save();
+    res.redirect("http://localhost:8080/home?saved=true");
+});
+
+
+app.get("/service/name", async (req,res)=>{
+    // let data = await catgs.find();
+    const data = await provs.find();
+    res.render("temp.ejs", { mainData : data  , serviceName : "provider details"});
+});
+
+
+
+
+
 
 
 

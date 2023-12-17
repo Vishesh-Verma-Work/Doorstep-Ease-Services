@@ -33,4 +33,9 @@
 
      
 
- 
+    const urlParams = new URLSearchParams(window.location.search);
+    const saved = urlParams.get('saved');
+
+    if (saved === 'true') {
+        alert('Data saved!');
+    }
