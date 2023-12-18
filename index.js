@@ -16,8 +16,6 @@ main().then( ()=>{
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/DoorStepEase');
-
-
 }
 
 
@@ -99,6 +97,9 @@ app.post("/IDdetail", (req,res)=>{
 });
 
 
+
+ 
+
 app.get("/service/Carpentry", async (req,res)=>{
     // let data = await catgs.find();
     const data = await catgs.find({ type: 'carpentry' });
@@ -162,7 +163,17 @@ app.get("/service/HVACServices", async (req,res)=>{
 });
 
 
- 
+// catgs.deleteMany({}, (error, result) => {
+//     if (error) {
+//       console.error(error);
+//       return;
+//     }
+//     console.log(`${result.deletedCount} documents deleted`);
+//     client.close();
+//   });
+
+
+
   //DATA
 
 

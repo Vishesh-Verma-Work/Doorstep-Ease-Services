@@ -30,23 +30,30 @@ body {
 
 h5 {
     font-size: 1rem;
+    font-weight: 600;
     display: inline-block;
 }
 
 .des {
     /* font-size: 1.7rem; */
     margin: .8rem 0;
+    
 }
+
+
 
 .dess {
     font-size: 1rem;
     font-weight: 600;
 }
 .rup {
+    font-size: 1.25rem;
     color: green;
     font-weight: 700;
 }
-
+#only {
+    color: rgba(0, 0, 0, 0.781);
+}
 span {
     font-size: 1.1rem;
 }
@@ -63,13 +70,19 @@ span {
     display: flex;
     justify-content: space-around;
     align-items: start;
-    background-color: rgba(235, 235, 235, 0.322);
+    background-color: rgba(39, 202, 202, 0.322);
     border-radius: 1rem;
     margin: 2rem;
     padding: 2rem;
     width:59%;
     text-align: start;
-    border: 1px solid black;
+    border: 1.2px solid black;
+   
+        background: linear-gradient(45deg, rgba(69, 88, 255, 0.137) 33%, transparent 1%),
+                    linear-gradient(-45deg, rgba(69, 88, 255, 0.137) 33%, transparent 1%);
+        background-size: 5rem;
+    
+    
 }
 
 .img img {

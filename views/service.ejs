@@ -67,7 +67,8 @@
 
                     <div class="des rup">
                         <span>&#8377;</span>
-                        <%=data.cost %> <br>
+                        <%=data.cost %> 
+                        <span id="only">only</span>
                     </div>
 
                     <div class="des">
@@ -75,11 +76,8 @@
                         <%= data.code1 %> &nbsp;&nbsp; <%= data.num1 %>
                     </div>
 
-                    <div class="opt">
-                        <div class="des">
-                            <h5>Type : </h5>
-                            <%= data.type %> <br>
-                        </div>
+                    
+                
 
 
 
@@ -94,10 +92,7 @@
                             <%= data.exp %> <br>
                         </div>
 
-                        <div class="des">
-                            <h5>Address : </h5>
-                            <%= data.add %> <br>
-                        </div>
+                       
 
                         <div class="des">
                             <h5>Email : </h5>
@@ -110,10 +105,13 @@
                             <h5>Secondary Number : </h5>
                             <%= data.code2 %> &nbsp;&nbsp; <%= data.num2 %>
                         </div>
-                    </div>
+                   
+                        <div class="des">
+                            <h5>Address : </h5>
+                            <%= data.add %> <br>
+                        </div>
                     
-                    <button id="btn">Get More Info</button>
-                    <button id="btn2">Less Info</button>
+                    
                 </div>
 
 
