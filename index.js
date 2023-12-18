@@ -55,6 +55,9 @@ app.get("/", (req,res)=>{
     res.render("index.ejs");
 });
 
+app.get("/try", (req,res)=>{
+    res.render("try.ejs");
+});
 
 app.get("/home", (req,res)=>{
     res.render("index.ejs");
@@ -74,14 +77,12 @@ app.get("/addservices", (req,res)=>{
 
 app.post("/IDdetail", (req,res)=>{
     let {title, description,upperDropdown, price, name, Experience,address,email,primaryCountryCode,primaryPhoneNumber,alternateCountryCode,alternatePhoneNumber} = req.body;
- 
 
     let newCatg = new catgs({
         serviceName : title,
         desc : description,
         type : upperDropdown,
         cost : price,
-
         name : name,
         exp : Experience,
         add : address,
@@ -91,78 +92,73 @@ app.post("/IDdetail", (req,res)=>{
         code2 : alternateCountryCode,
         num2 : alternatePhoneNumber,
     });
-
     console.log(newCatg);
-
     newCatg.save();
-
     // res.render("index.ejs");
     res.redirect("http://localhost:8080/home?saved=true");
 });
 
 
-
-
 app.get("/service/Carpentry", async (req,res)=>{
     // let data = await catgs.find();
     const data = await catgs.find({ type: 'carpentry' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Carpentry Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Carpentry Services", img1 : "/assest/Dcarp1.png", img2 : "/assest/Dcarp2.png", unk : "/assest/unk.png" });
 });
 
 app.get("/service/Plumber", async (req,res)=>{
     const data = await catgs.find({ type: 'plumbing' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Plumber Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Plumber Services", img1 : "/assest/Dplumb1.png", img2 : "/assest/Dplumb2.png", unk : "/assest/unk.png" });
 });
 
 
 app.get("/service/Electrician", async (req,res)=>{
     const data = await catgs.find({ type: 'Electrician' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Electrical Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Electrical Services", img1 : "/assest/Dplumb1.png", img2 : "/assest/Dplumb2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/PestControlServices",async  (req,res)=>{
     const data = await catgs.find({ type: 'PestControlServices' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Pest Control Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Pest Control Services", img1 : "/assest/Dp1.png", img2 : "/assest/Dp2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/HomeCleaning", async (req,res)=>{
     const data = await catgs.find({ type: 'HomeCleaning' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Home Cleaning Services"});  
+    res.render("service.ejs", { mainData : data  , serviceName : "Home Cleaning Services",  img1 : "/assest/Dh1.png", img2 : "/assest/Dh2.png", unk : "/assest/unk.png"});  
 });
 
 app.get("/service/PaintServices", async (req,res)=>{
     const data = await catgs.find({ type: 'PaintServices' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Paint Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Paint Services",  img1 : "/assest/Dpaint1.png", img2 : "/assest/Dpaint2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/WaterPurification",async  (req,res)=>{
     const data = await catgs.find({ type: 'WaterPurification' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Water Purification Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Water Purification Services",  img1 : "/assest/Dw1.png", img2 : "/assest/Dw2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/InteriorDesign", async (req,res)=>{
     const data = await catgs.find({ type: 'InteriorDesign' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Interior Design Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Interior Design Services",  img1 : "/assest/Di1.png", img2 : "/assest/Di2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/KitchenCleaning",async  (req,res)=>{
     const data = await catgs.find({ type: 'KitchenCleaning' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Kitchen Cleaning Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Kitchen Cleaning Services",  img1 : "/assest/Dk1.png", img2 : "/assest/Dk2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/RoofingRepairs",async  (req,res)=>{
     const data = await catgs.find({ type: 'RoofingRepairs' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Roofing Repairs Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Roofing Repairs Services",  img1 : "/assest/Dr1.png", img2 : "/assest/Dr2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/CivilWork", async (req,res)=>{
     const data = await catgs.find({ type: 'CivilWork' });
-    res.render("service.ejs", { mainData : data  , serviceName : "Civil Work Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "Civil Work Services",  img1 : "/assest/Dc1.png", img2 : "/assest/Dc2.png", unk : "/assest/unk.png"});
 });
 
 app.get("/service/HVACServices", async (req,res)=>{
     const data = await catgs.find({ type: 'HVAC Services' });
-    res.render("service.ejs", { mainData : data  , serviceName : "HVAC Services Services"});
+    res.render("service.ejs", { mainData : data  , serviceName : "HVAC Services Services",  img1 : "/assest/Da1.png", img2 : "/assest/Da2.png", unk : "/assest/unk.png"});
 });
 
 
